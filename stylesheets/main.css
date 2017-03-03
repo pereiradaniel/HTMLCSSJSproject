@@ -1,0 +1,230 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ==========END OF CSS RESET========== */
+
+/* ==== BASE PROPERTIES ==== */
+	html {
+		background-color: #fff;
+		color: #333333;
+	}
+	.container {
+		margin-left: auto;
+		margin-right: auto;
+		width: 75%;
+	}
+/* ==== TYPOGRAPHY ==== */
+	@font-face {
+	  font-family: "Font-awesome";
+	  src: url(../fonts/fontawesome-webfont.ttf) format("truetype");
+	}
+	@font-face {
+	  font-family: "Ubuntu-mono";
+	  src: url(../fonts/UbuntuMono-R.ttf) format("truetype");
+	}
+	@font-face {
+	  font-family: "Believer";
+	  src: url(../fonts/BELIEVER.TTF) format("truetype");
+	}
+	html {
+		font-family: 'Ubuntu-mono';
+	}
+	a {
+		text-decoration: none;
+	}
+	h1 {
+		font-size: 18px;
+	}
+	h2 {
+		font-size: 20px;
+	}
+
+/* FONTS */
+	.awesome {
+		font-family: 'Font-awesome';
+	}
+	.ubuntu-mono {
+		font-family: 'Ubuntu-mono';
+	}
+	.believer {
+		font-family: 'Believer';
+	}
+	.centered-text {
+		text-align: center;
+	}
+	
+	/* FONT STYLE */
+		.underlined {
+			text-decoration: underline;
+		}
+
+/* DOM NODE STYLES */
+	.transition-to-white {
+		transition: background-color 0.5s;
+	}
+	.transition-to-white:hover {
+		background-color: #fff;
+	}
+
+/* COLORS */
+	/* BACKGROUNDS */
+			.node-grey-bgd {
+				background-color: #333;
+			}
+			.node-grey-bgdt {
+				background-color: rgba(128,189,1,0.1);
+			}
+			.node-green-bgd {
+				background-color: #80bd01;
+			}
+	/* TEXT */
+		.node-green {
+			color: #80bd01;
+		}
+		.node-grey {
+			color: #333;	
+		}
+		.white {
+			color: #fff;
+		}
+	/* SHADOWS, BORDERS */
+		.node-green-box-shadow {
+			box-shadow: 3px 3px 3px rgba(128,189,1,0.4);	
+		}
+
+/* MARGINS, BORDERS, PADDING STYLES */
+	.base-padding {
+		padding: 0.75em;
+	}
+	.base-top-margin {
+		margin-top: 1em;
+	}
+	.base-bottom-margin {
+		margin-bottom: 1em;
+	}
+	.paragraph {
+		margin-top: 0.75em;
+		margin-bottom: 1.25em;
+		padding: 0.25em;
+	}
+	.base-border-radius {
+		border-radius: 1px;
+	}
+	.round-radius {
+		border-radius: 50%;
+	}
+	.half-base-padding {
+		padding: 0.5em;
+	}
+	.border-dashed-bottom {
+		border-bottom: 1px dashed rgba(128,189,1,0.4);
+	}
+	.border-top-solid {
+		border-top: 1px solid rgba(128,189,1,0.3);
+	}
+
+/* LINK STYLES */
+	.base-link {
+		display: inherit;
+		transition: background-color 0.5s;
+	}
+	.base-link:hover {
+		background-color: rgba(51,51,51,0.9);
+	}
+
+/* ==== MENU STYLES ==== */
+	li.item {
+		transition: color 0.5s, background-color 0.5s, box-shadow 0.5s;
+	}
+	li:hover.item {
+		background-color: #80bd01;
+		color:#fff;
+	}
+	.item-padding {
+		padding-right: 0.2em;
+		padding-left: 0.2em;
+	}
+	.notvisible {
+		display: none;
+	}
+
+/* ==== MEDIA QUERIES ==== */
+	@media only screen and (min-width: 960px) {
+		li.item {
+				display: inline;
+		    margin-right: 1em;
+		    margin-left: 1em;
+		}
+	}
+
+	@media only screen and (min-width: 640px) and (max-width: 959px) {
+		li.item {
+				display: inline;
+		    margin-right: 0.5em;
+		    margin-left: 0.5em;
+		}
+	}
+
+	@media only screen and (min-width: 400px) and (max-width: 639px) {
+		li.item {
+				display: block;
+		}
+	}
+
+	@media only screen and (min-width: 321px) and (max-width: 399px) {
+		li.item {
+			display: block;
+		}
+	}
+
+	@media only screen and (max-width: 320px) {
+		li.item {
+			display: block;
+		}	
+	}
